@@ -1,0 +1,340 @@
+/*
+    Nama    : Ellen Gabriela Serumena
+    NIM     : 2482031
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fdf4;
+    color: #064e3b;
+    line-height: 1.6;
+    margin: 0;
+    padding: 16px;
+}
+
+img {
+    width: 70%;
+    height: 100%;
+}
+
+a {
+    color: #059669;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #064e3b;
+}
+
+h2, h3 {
+    color: #047857;
+    margin-top: 0;
+}
+
+/* ===== HEADER, NAV, FOOTER (sama di semua halaman) ===== */
+header {
+    text-align: center;
+    background-color: #059669;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0 0 5px;
+}
+
+header p {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #d1fae5;
+    border-radius: 8px;
+}
+
+nav a {
+    color: #047857;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #065f46;
+}
+
+nav a.active {
+    background-color: #059669;
+    color: white;
+}
+
+footer {
+    max-width: 900px;
+    margin: 20px auto 0;
+    text-align: center;
+    background-color: #059669;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ===== MAIN & SECTION ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 5px solid #059669;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== BUTTON / CALL-TO-ACTION ===== */
+.btn {
+    display: inline-block;
+    background-color: #059669;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #064e3b;
+    color: white;
+}
+
+.btn-outline {
+    background-color: white;
+    color: #059669;
+    border: 2px solid #059669;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* ===== HOME: HERO ===== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 1.8em;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #059669;
+}
+
+/* ===== BIODATA ===== */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #059669;
+}
+
+.profile-info {
+    width: 100%;
+}
+
+/* Hobi: dua daftar berdampingan di layar besar */
+.hobby-lists {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    color: #333;
+}
+
+table, th, td {
+    border: 1px solid #888;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ===== MY HOLIDAY: GALERI FLEXBOX ===== */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 16px;
+}
+
+.gallery figure {
+    flex: 1 1 100%;
+    margin: 0;
+    background-color: #f0fdf4;
+    border: 1px solid #a7f3d0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    padding: 10px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* ===== CONTACT ===== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a7f3d0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #059669;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: 8px;
+}
+
+/* ===== TABLET (>= 600px) ===== */
+@media (min-width: 600px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hobby-lists {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery figure {
+        flex: 1 1 calc(50% - 16px);
+    }
+}
+
+/* ===== DESKTOP (>= 900px) ===== */
+@media (min-width: 900px) {
+    body {
+        padding: 20px;
+    }
+
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .profile {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .profile-photo {
+        flex-shrink: 0;
+    }
+
+    .gallery figure {
+        flex: 1 1 calc(33.333% - 16px);
+    }
+}
